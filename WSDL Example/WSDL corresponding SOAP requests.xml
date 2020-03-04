@@ -1,0 +1,29 @@
+POST /SoapWebService/Service.asmx HTTP/1.1
+Host: pauline.informatik.tu-chemnitz.de
+Content-Type: application/soap+xml
+Content-Length: length
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <soap12:Body>
+    <Add xmlns="">
+      <a>2</a>
+      <b>3</b>
+    </Add>
+  </soap12:Body>
+</soap12:Envelope>
+
+---
+
+HTTP/1.1 OK 200
+Content-Type: application/soap+xml
+Content-Length: length
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <soap12:Body>
+    <AddResponse xmlns="http://vsr.informatik.tu-chemnitz.de/edu/2008/pvs/soapwebservice">
+      <AddResult>5<AddResult>
+    </AddResponse>
+  </soap12:Body>
+</soap12:Envelope>
